@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-title id = "login0"> 로그인 </ion-title>
+  <ion-back-button defaultHref="/home" id="back"></ion-back-button>
+  </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-item class="ion-activated">
+      <ion-icon name="alert-outline" slot=""></ion-icon>
+      <ion-label>로그인 후 앱 이용이 가능합니다.</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <form (ngSubmit)="onLoginSubmit()">
+  <ion-list lines="none" class="ion-no-margin ion-no-padding">
+  <ion-item>
+  
+  <ion-label position="floating"> 아이디 </ion-label>
+  <br />
+  <div id= "table0">
+  <ion-input
+  required
+  type="text"
+  [(ngModel)]="username"
+  name="username"
+  placeholder="아이디 입력"><ion-icon name="person-outline"></ion-icon></ion-input></div>
+  </ion-item>
+  <ion-item>
+
+  <ion-label position="floating"> 비밀번호 </ion-label>
+  <br />
+  <div id="table1">
+  <ion-input
+  required
+  type="password"
+  [(ngModel)]="password"
+  name="password"
+  placeholder="비밀번호 입력"><ion-icon name="lock-closed-outline"></ion-icon></ion-input></div>
+  </ion-item>
+  <div class="ion-padding">
+  <ion-button expand="block" type="submit" class="ion-no-margin" shape="round"
+  >로그인 </ion-button
+  >
+  <ion-button href="forgot-id" position="stacked" id="fontsize-find" fill="clear" color="dark" shape="round" size="small">
+  계정 찾기  </ion-button
+  >
+  <ion-button href="#" position="stacked" id="fontsize-find" fill="clear" color="dark" shape="round" size="small">
+  회원가입 </ion-button
+  >
+  </div>
+  </ion-list>
+  </form>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>주차 도우미</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <img src="../../assets/parking.jpg" alt="">
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>어떤 앱인가요?</ion-label>
+    </ion-item>
+  
+    <ion-card-content>
+      주차 편의성 향상을 위해 주차하신 위치와 시간을 메시지로 알려주는 앱입니다.
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+
+  

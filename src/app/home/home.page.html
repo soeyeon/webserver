@@ -1,0 +1,37 @@
+<ion-header>
+  <div id=main-pic>
+  <img src="../../assets/parking.jpg" alt="">
+</div>
+  <ion-toolbar>
+    <ion-title id=main0>
+    주차 도우미
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center><br>
+        <ion-button [routerLink]="['/register']" expand="block" color="primary" shape="round">회원가입</ion-button>
+
+        <span class="divider line one-line">or</span>
+
+        <span class="already">이미 계정이 있으신가요?</span>
+
+        <ion-button [routerLink]="['/login']" expand="block" color="danger" shape="round">로그인</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-card>
+  <ion-item>
+    <ion-icon name="pin" slot="start"></ion-icon>
+    <ion-label>어떤 앱인가요?</ion-label>
+  </ion-item>
+
+  <ion-card-content>
+  주차 편의성 향상을 위해 주차하신 위치와 시간을 메시지로 알려주는 앱입니다.
+  </ion-card-content>
+</ion-card>

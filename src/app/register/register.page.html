@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+<ion-buttons slot="start">
+<ion-menu-button></ion-menu-button>
+</ion-buttons>
+<div id="register-top">
+<ion-title> 회원가입 </ion-title>
+<ion-back-button defaultHref="/home" id="back"></ion-back-button>
+</div>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+<form (ngSubmit)="onRegisterSubmit()">
+<ion-list class="ion-no-margin ion-no-padding">
+<ion-item lines="">
+<ion-label position="floating" id="table_re0">이름 </ion-label>
+<br />
+<ion-input
+required
+type="text"
+[(ngModel)]="name"
+name="name"
+></ion-input>
+</ion-item>
+
+<ion-item lines="">
+<ion-label position="floating" id="table_re1">이메일</ion-label><ion-button fill="outline" slot="end">인증번호 받기</ion-button>
+<br />
+<ion-input
+required
+type="text"
+[(ngModel)]="email"
+name="email"
+></ion-input>
+</ion-item>
+<ion-item lines="">
+<ion-label position="floating"id="table_re2">계정명 </ion-label>
+<br />
+<ion-input
+required
+type="text"
+[(ngModel)]="username"
+name="username"
+></ion-input>
+</ion-item>
+
+<ion-item lines="">
+<ion-label position="floating" id="table_re3">비밀번호 </ion-label>
+<br />
+<ion-input
+required
+type="password"
+[(ngModel)]="password"
+name="password"
+></ion-input>
+</ion-item>
+
+<ion-item lines="">
+  <ion-label position="floating" id="table_re3">비밀번호 확인 </ion-label>
+  <br />
+  <ion-input
+  required
+  type="password"
+  [(ngModel)]="password2"
+  name="password2"
+  ></ion-input>
+  </ion-item>
+
+<div class="ion-padding">
+<ion-button expand="block" type="submit" class="ion-no-margin" shape="round" [routerLink]="['/login']" >등록 </ion-button
+>
+</div>
+</ion-list>
+</form>
+
+</ion-content>
+
+
+
